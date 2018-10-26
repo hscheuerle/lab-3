@@ -1,0 +1,12 @@
+{
+  "name": "lab-3",
+  "version": "1.0.0",
+  "description": "lab-3 analyzing generated research papers",
+  "scripts": {
+    "init": "mongod --port=27017 --dbpath=./.env/db --logpath=./.env/mongod.log --fork",
+    "start": "concurrently 'npm start --prefix client' 'npm start --prefix server'",
+    "stop": "mongo admin --eval='db.shutdownServer();'"
+  },
+  "author": "Harry Scheuerle",
+  "license": "ISC"
+}
